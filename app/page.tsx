@@ -25,11 +25,17 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8 text-center">
-          <h1 className="mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-4xl font-bold text-transparent dark:from-purple-400 dark:to-pink-400">
-            2019年像素风QQ头像
-          </h1>
+          <div className="mb-4 flex items-center justify-center gap-4">
+            <img src="/favicon.svg" alt="企鹅logo" className="h-16 w-16" />
+            <h1 className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-4xl font-bold text-transparent dark:from-purple-400 dark:to-pink-400">
+              2019年像素风QQ头像
+            </h1>
+          </div>
           <p className="text-lg text-gray-600 dark:text-gray-300">
             QQ 20周年纪念 · 105个精选头像
+          </p>
+          <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            作者：SkyWang
           </p>
         </header>
 
@@ -73,9 +79,26 @@ export default function Home() {
               <p className="mt-2 text-center text-sm font-medium text-gray-700 dark:text-gray-300">
                 #{avatar.id}
               </p>
+              <p className="text-center text-xs text-gray-500 dark:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                长按保存
+              </p>
             </div>
           ))}
         </div>
+
+        <footer className="mt-12 text-center">
+          <div className="mx-auto max-w-2xl rounded-2xl bg-white/80 p-6 shadow-lg backdrop-blur-sm dark:bg-gray-800/80">
+            <h3 className="mb-3 text-lg font-semibold text-gray-900 dark:text-white">
+              使用说明
+            </h3>
+            <p className="mb-4 text-gray-600 dark:text-gray-300">
+              长按头像可保存到本地，点击头像可查看大图详情
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              © 2025 SkyWang · 像素风头像展示
+            </p>
+          </div>
+        </footer>
 
         {selectedAvatar && (
           <div
